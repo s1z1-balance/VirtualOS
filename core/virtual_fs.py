@@ -1,16 +1,19 @@
 from datetime import datetime
 from typing import Dict, List, Union
 
+from datetime import datetime
+from typing import Dict, List, Union
+
 class VirtualFileSystem:
     def __init__(self):
-        self.current_time = datetime.strptime("2025-03-08 14:13:12", "%Y-%m-%d %H:%M:%S")
+        self.current_time = datetime.now()  # Используем текущее время вместо хардкода
         self.fs: Dict[str, Union[Dict, str]] = {
             '/': {
                 'home': {
                     'user': {
                         'documents': {
                             'welcome.txt': 'Welcome to Virtual OS!\ndev: s1z1-balance, github: github.com/s1z1-balance',
-                            'virtualosforks.txt': "Virtual OS is a simple virtual file system. You can fork it on GitHub. Good Luck!",\
+                            'virtualosforks.txt': "Virtual OS is a simple virtual file system. You can fork it on GitHub. Good Luck!",
                             'howtoaddyourcommands.txt': 'guide in dev/commands.md',
                         },
                         'downloads': {},

@@ -1,6 +1,5 @@
 from typing import List
 from .base_command import Command
-import json
 from datetime import datetime
 
 class About(Command):

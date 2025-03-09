@@ -1,7 +1,7 @@
 from typing import Dict
 import shlex
 from commands import *
-from .fs import VirtualFileSystem
+from .virtual_fs import VirtualFileSystem
 
 class VirtualOS:
     def __init__(self):

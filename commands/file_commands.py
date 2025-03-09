@@ -1,6 +1,8 @@
 from typing import List
 from .base_command import Command
-import os
+
+def get_basename(path: str) -> str:
+    return path.split('/')[-1]
 
 class PWD(Command):
     def execute(self, args: List[str]) -> str:
@@ -15,7 +17,7 @@ class LS(Command):
         if node is None:
             return f"ls: cannot access '{path}': No such file or directory"
         elif isinstance(node, str):
-            return os.path.basename(path)
+            return get_basename(path)  # Используем собственную функцию
         else:
             files = sorted(node.keys())
             formatted_files = []
