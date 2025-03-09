@@ -24,24 +24,17 @@ class Env(Command):
 class Clear(Command):
     def execute(self, args: List[str]) -> str:
         return '\x1B[2J\x1B[H'
-
 class Help(Command):
     def execute(self, args: List[str]) -> str:
         commands_help = {
-            'pwd': 'Print current working directory',
-            'ls': 'List directory contents',
-            'cd': 'Change directory',
-            'echo': 'Display a message or variable',
-            'cat': 'Show file contents',
-            'mkdir': 'Create a new directory',
-            'touch': 'Create a new empty file',
-            'rm': 'Remove file or directory',
             'date': 'Show current date and time',
             'whoami': 'Print current user name',
             'hostname': 'Show system\'s host name',
             'env': 'Display environment variables',
-            'nano': 'Text editor',
             'clear': 'Clear terminal screen',
-            'help': 'Show this help message'
+            'pwd': 'Print working directory',
+            'help': 'Show this help message',
+            'about': 'Show system information and documentation'  # Добавляем описание
         }
+        
         return '\n'.join([f"{cmd}: {desc}" for cmd, desc in commands_help.items()])

@@ -1,17 +1,23 @@
-from .file_commands import PWD, LS, CD, Cat
-from .system_commands import Date, Whoami, Hostname, Env, Clear, Help
-from .editor_commands import Nano
+from .base_command import Command
+from .system_commands import (
+    Date,
+    Whoami,
+    Hostname,
+    Env,
+    Clear,
+    Help,
+    PWD
+)
+from .system_info import About  # Добавляем импорт
 
 __all__ = [
-    'PWD',
-    'LS',
-    'CD',
-    'Cat',
+    'Command',
     'Date',
     'Whoami',
     'Hostname',
     'Env',
     'Clear',
     'Help',
-    'Nano'
+    'PWD',
+    'About'  # Добавляем в список
 ]
