@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual OS Terminal</title>
+    <link rel="stylesheet" href="/static/css/terminal.css">
+</head>
+<body>
+    <div id="terminal-window">
+        <div id="terminal-header">
+            <div class="window-controls">
+                <button class="control-button" id="close-button"></button>
+                <button class="control-button" id="minimize-button"></button>
+                <button class="control-button" id="maximize-button"></button>
+            </div>
+            <div id="terminal-title">Virtual OS Terminal</div>
+        </div>
+        <div id="terminal-content"></div>
+        <div id="input-line">
+            <span id="prompt">$</span>
+            <input type="text" id="command-input" autofocus>
+        </div>
+        <div class="nano-editor">
+            <div class="nano-header"></div>
+            <div class="nano-content">
+                <textarea class="nano-textarea"></textarea>
+            </div>
+            <div class="nano-footer">
+                ^X Exit | ^O Save | ^W Where Am I
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/terminal.js"></script>
+</body>
+</html>
