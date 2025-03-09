@@ -9,7 +9,9 @@ class VirtualFileSystem:
                 'home': {
                     'user': {
                         'documents': {
-                            'welcome.txt': 'Welcome to Virtual OS!\nThis is a sample text file.'
+                            'welcome.txt': 'Welcome to Virtual OS!\ndev: s1z1-balance, github: github.com/s1z1-balance',
+                            'virtualosforks.txt': "Virtual OS is a simple virtual file system. You can fork it on GitHub. Good Luck!",\
+                            'howtoaddyourcommands.txt': 'guide in dev/commands.md',
                         },
                         'downloads': {},
                         '.bashrc': 'export PATH="/usr/local/bin:$PATH"'
