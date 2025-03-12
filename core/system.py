@@ -1,7 +1,7 @@
 from typing import Dict
 import shlex
 from commands import *
-from .virtual_fs import VirtualFileSystem
+from core.virtual_fs import VirtualFileSystem
 
 class VirtualOS:
     def __init__(self):
@@ -14,7 +14,11 @@ class VirtualOS:
             'clear': Clear(self.fs, self.fs.env_vars),
             'help': Help(self.fs, self.fs.env_vars),
             'pwd': PWD(self.fs, self.fs.env_vars),
-            'about': About(self.fs, self.fs.env_vars)  # Добавляем команду
+            'ls': LS(self.fs, self.fs.env_vars),
+            'cd': CD(self.fs, self.fs.env_vars),
+            'cat': Cat(self.fs, self.fs.env_vars),
+            'nano': Nano(self.fs, self.fs.env_vars),
+            'about': About(self.fs, self.fs.env_vars)
         }
 
     def execute(self, command_line: str) -> str:

@@ -5,19 +5,24 @@ from .system_commands import (
     Hostname,
     Env,
     Clear,
-    Help,
-    PWD
+    Help
 )
-from .system_info import About  # Добавляем импорт
+from .file_commands import PWD, LS, CD, Cat  # Добавляем импорт из file_commands
+from .editor_commands import Nano  # Добавляем импорт Nano
+from .system_info import About
 
 __all__ = [
     'Command',
-    'Date',
+    'Date', 
     'Whoami',
     'Hostname',
     'Env',
     'Clear',
     'Help',
     'PWD',
-    'About'  # Добавляем в список
+    'LS',
+    'CD', 
+    'Cat',
+    'Nano',
+    'About'
 ]

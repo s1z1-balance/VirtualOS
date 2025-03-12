@@ -16,8 +16,11 @@ def execute():
     if not command:
         return jsonify({'error': 'No command provided'})
     
-    output = virtual_os.execute(command)
-    return jsonify({'output': output})
+    try:
+        output = virtual_os.execute(command)
+        return jsonify({'output': output})
+    except Exception as e:
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
